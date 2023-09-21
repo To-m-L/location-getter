@@ -1,6 +1,10 @@
 <template>
-  <button @click="showUserLocation">Show My Location</button>
-  <div id="map" style="width: 100%; height: 400px;"></div>
+  <div class="center-container">
+    <button @click="showUserLocation">Show My Location</button>
+  </div>
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
 </template>
 
 <script>
@@ -38,7 +42,7 @@ export default {
   mounted() {
     // Load Google Maps API
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDaxb1pole_WmObrtDg4C-diHCPuyaAmZU`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=API Key`;
     script.defer = true;
     script.async = true;
     script.onload = () => {
@@ -52,5 +56,22 @@ export default {
 </script>
 
 <style scoped>
-/* Add your custom styles for the button if needed */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 0px; /* Optional: Add margin below the button */
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#map {
+  width: 80%; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
+}
 </style>

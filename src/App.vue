@@ -1,14 +1,14 @@
 <template>
-  <MapButton />
+  <Map />
 </template>
 
 <script>
-import MapButton from './components/MapButton.vue';
+import Map from './components/Map.vue';
 
 export default {
   name: 'App',
   components: {
-    MapButton,
+    Map,
   }
 }
 </script>
